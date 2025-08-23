@@ -1,14 +1,15 @@
 
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import LandingPage from './pages/LandingPage'
 import Typing from './pages/Typing'
+import { ThemeProvider } from './components/theme-provider'
 
-const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
+
+    <ThemeProvider>
+
    
         <BrowserRouter>
           <Routes>
@@ -17,8 +18,9 @@ const App = () => (
 
           </Routes>
         </BrowserRouter>
+     </ThemeProvider>
 
-  </QueryClientProvider>
+
 );
 
 export default App;
