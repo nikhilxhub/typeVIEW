@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import TypingTest from '@/components/TypingTest'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Typing = () => {
   return (
@@ -8,22 +9,38 @@ const Typing = () => {
       <Header />
 
       <main className='container mx-auto px-4 py-8'>
-
-        <div className='text-center'>
-          <h2>
+        <div className='text-center font-poppins'>
+          <h2 className='font-semibold text-2xl mb-4'>
             Test Your Typing Speed
           </h2>
-          <p>
-            Type through the minds of Kafka and Dostoevsky—where every word carries weight.
+
+          <p className='text-lg'>
+            Type through the minds of{' '}
+            <motion.span
+              className='font-edu  font-bold'
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+            >
+              Kafka
+            </motion.span>{' '}
+            and{' '}
+            <motion.span
+              className='font-edu font-bold'
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Dostoevsky
+            </motion.span>
+            —where every word carries weight.
           </p>
 
-          <TypingTest />
-
+          <div className='mt-8'>
+            <TypingTest />
+          </div>
         </div>
       </main>
-
-
-    
     </div>
   )
 }
