@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import TypingTest from '@/components/TypingTest'
-import React from 'react'
 import { motion } from 'framer-motion'
 
 const Typing = () => {

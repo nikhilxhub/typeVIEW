@@ -1,8 +1,14 @@
 import React from 'react'
+import ControlPanel from './ControlPanel'
 
 const TypingTest = () => {
+
+
   return (
-    <div>TypingTest</div>
+    <div>
+
+      <ControlPanel />
+    </div>
   )
 }
 
