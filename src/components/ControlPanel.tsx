@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tabs } from './ui/tabs'
 
 const ControlPanel = () => {
   return (
@@ -8,6 +9,12 @@ const ControlPanel = () => {
             <div>
 
                 {/* timer */}
+                <div>Timer</div>
+                <Tabs
+                    
+                >
+
+                </Tabs>
             </div>
 
             <div>
