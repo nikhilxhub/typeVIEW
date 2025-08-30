@@ -52,7 +52,7 @@ export const useTypingStore = create<TypingState>()(
     (set, get) => ({
       // Initial state
       timerDuration: 60,
-      category: 'JavaScript',
+      category: 'kafka',
       status: 'idle',
       timeLeft: 60,
       currentText: '',
