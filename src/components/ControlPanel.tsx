@@ -6,10 +6,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Button } from './ui/button';
 
 import { Play, RotateCcw } from 'lucide-react';
+import { getRandomQuestion } from '@/data/questions';
 
 const ControlPanel = () => {
 
-    const { timerDuration, setTimerDuration, category, startTest, setCategory, status, resetTest } = useTypingStore();
+    const { timerDuration, setTimerDuration, category, startTest, setCategory, status, resetTest,
+        setCurrentText
+    } = useTypingStore();
 
     const categories = ['kafka', 'Dostoevsky'];
     const timerOptions: TimerOption[] = [30, 60, 180];
@@ -21,6 +24,8 @@ const ControlPanel = () => {
     }
 
     const handleStart = () => {
+        const question = getRandomQuestion(category);
+        setCurrentText(question.text);
 
         startTest();
 
