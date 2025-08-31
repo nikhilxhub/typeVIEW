@@ -4,13 +4,31 @@ import ControlPanel from './ControlPanel'
 import { motion } from 'framer-motion';
 import TypingArea from './TypingArea';
 import ResultCard from './ResultCard';
+import { useEffect } from 'react';
 
 const TypingTest = () => {
- const { status } = useTypingStore();
+ const { status, updateTimer, addWpmDataPoint, wpm } = useTypingStore();
 
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    
+    if (status === 'running') {
+      interval = setInterval(() => {
+        updateTimer();
+        if (wpm > 0) {
+          addWpmDataPoint(wpm);
+        }
+      }, 1000);
+    }
 
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [status, updateTimer, addWpmDataPoint, wpm]);
   return (
-    <div>
+    <div className='max-w-4xl mx-auto space-y-6'>
 
       <ControlPanel />
 
