@@ -24,7 +24,50 @@ export const questions: Question[] = [
     id: "kafka-4",
     category: "kafka",
     text: "'O God,' he thought, 'what a demanding job I've chosen! Day in, day out on the road. The stresses of trade are much greater than the work going on at head office, and, in addition to that, I have to deal with the problems of traveling, the worries about train connections, irregular bad food, temporary and constantly changing human relationships which never come from the heart. To hell with it all!' He felt a slight itching on the top of his abdomen. He slowly pushed himself on his back closer to the bed post so that he could lift his head more easily, found the itchy part, which was entirely covered with small white spots (he did not know what to make of them), and wanted to feel the place with a leg. But he retracted it immediately, for the contact felt like a cold shower all over him."
-  }
+  },
+  {
+    id:"kafka-5",
+    category:"kafka",
+    text:"Franz Kafka, the author of 'The Metamorphosis', 'The Trial', 'Letters to Milena', and more, is one of the most iconic authors to write about alienation, absurdity, and musings. Here we mention 10 quotes from his works that make people think deeply about life.'In a way, you've already chosen what you've become.' - A quote that pushes people to think again about personal responsibility, be it past decisions or future ones, this line puts people into deep thought about decisions made before.'A first sign of the beginning of understanding is the wish to die.'- A quote that mentions death, this one makes people overthink about the true meaning of life and understanding it in a raw form.'Suffering is the positive element in this world, indeed it is the only link between this world and the positive.' - This quote makes people reconsider suffering, not as a curse, but as a bridge to growth."
+  },
+  {
+    id:"Dostoevsky-1",
+    category:"Dostoevsky",
+    text:"Crime and Punishment, novel by Russian writer Fyodor Dostoyevsky, first published in 1866. His first masterpiece, the novel is a psychological analysis of the poor former student Raskolnikov, whose theory that he is an extraordinary person able to take on the spiritual responsibility of using evil means to achieve humanitarian ends leads him to murder. The act produces nightmarish guilt in Raskolnikov. The story is one of the finest studies of the psychopathology of guilt written in any language."
+  },
+  {
+    id:"Dostoevsky-2",
+    category:"Dostoevsky",
+    text:"Raskolnikov, a former student, lives in poverty and chaos in St. Petersburg. He decides—through contradictory theories, including utilitarian morality and the belief that extraordinary people have the 'right to transgress'—to murder Alyona Ivanovna, an elderly pawnbroker. Alyona's half sister, Lizaveta, arrives while he is rifling through Alyona's possessions, and he kills her too. In the meantime he befriends an alcoholic man, Marmeladov, whose daughter Sonya has been forced into prostitution to support the family. An old friend, Razumikhin, also enters his life, concerned by his aberrant behaviour. In addition, Raskolnikov’s sister, Dunya, who has left her job as a governess for Svidrigailov because of his improper advances toward her, arrives in St. Petersburg with their mother. Dunya intends to marry a man named Luzhin in order to improve their financial and social position."
+  },
+  {
+    id:"Dostoevsky-3",
+    category:"Dostoevsky",
+    text:"The narrative follows the twists and turns of Raskolnikov's emotions and elaborates his struggle with his conscience and the tightening noose of suspicion. He is ill through most of the story, and he angrily rejects his family's and Razumikhin's attempts to help him."
+  },
+  {
+    id:"Dostoevsky-3",
+    category:"Dostoevsky",
+    text:" When Marmeladov is run over by a carriage and dies, Raskolnikov gives Sonya and the family money for his funeral. He forbids Dunya to marry the pompous Luzhin, who offends Dunya to the point that she breaks off the engagement. Raskolnikov repeatedly visits Sonya, but he behaves in such an unhinged manner that she is frightened. When it seems that Porfiry, who is investigating the murder, is on the point of charging Raskolnikov, another man confesses. At a memorial dinner for Marmeladov, Luzhin falsely accuses Sonya of stealing from him, and Raskolnikov explains why he would do such a thing."
+  },
+  {
+    id:"Dostoevsky-5",
+    category:"Dostoevsky",
+    text:"Later he tells Sonya that he murdered the two women. Svidrigailov overhears the confession and subsequently uses that knowledge to try to blackmail Dunya into accepting him, but, when it becomes clear that she will never love him, he kills himself."
+  },
+
+  {
+    id:"kafka-6",
+    category:"kafka",
+    text:"hello"
+  },
+  // {
+  //   id:"kafka-2",
+  //   category:"kafka",
+  //   text:"world welcome"
+  // },
+
+
 ];
 
 

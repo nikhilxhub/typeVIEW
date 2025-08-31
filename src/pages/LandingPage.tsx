@@ -1,12 +1,13 @@
-import React from 'react'
+import { Button } from '@/components/ui/button';
+
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
 
     const navigate = useNavigate();
   return (
-    <div className='bg-teal-100'>LandingPage
-    <button onClick={() => navigate("/typing")}> go to main</button>
+    <div className=''>LandingPage
+    <Button onClick={() => navigate("/typing")}> Start Typing</Button>
     </div>
   )
 }

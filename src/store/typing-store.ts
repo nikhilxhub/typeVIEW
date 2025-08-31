@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export type TimerOption = 30 | 60 | 180
-export type TestStatus = "idle" | "running" | "completed"
+export type TestStatus = 'idle' | 'running' | 'completed';
+export type TimerOption = 30 | 60 | 180;
 
 export interface TestResult {
   wpm: number;
@@ -45,6 +45,7 @@ interface TypingState {
   resetTest: () => void;
   calculateStats: () => void;
   addWpmDataPoint: (wpm: number) => void;
+  loadNewQuestion: () => void;
 }
 
 export const useTypingStore = create<TypingState>()(
@@ -52,7 +53,7 @@ export const useTypingStore = create<TypingState>()(
     (set, get) => ({
       // Initial state
       timerDuration: 60,
-      category: 'kafka',
+      category: 'JavaScript',
       status: 'idle',
       timeLeft: 60,
       currentText: '',
@@ -70,8 +71,15 @@ export const useTypingStore = create<TypingState>()(
       setCurrentText: (text) => set({ currentText: text }),
       
       setTypedText: (text) => {
+        const { currentText, status } = get();
         set({ typedText: text });
         get().calculateStats();
+        
+        // Check if user has typed enough to reach the end of current text
+        if (status === 'running' && text.length >= currentText.length) {
+          // Load a new question immediately
+          get().loadNewQuestion();
+        }
       },
       
       startTest: () => {
@@ -157,6 +165,20 @@ export const useTypingStore = create<TypingState>()(
         set({ 
           wpmHistory: [...wpmHistory, { time: timeElapsed, wpm }]
         });
+      },
+
+      loadNewQuestion: () => {
+        const { category, status } = get();
+        if (status === 'running') {
+          // Import here to avoid circular dependency
+          import('@/data/questions').then(({ getRandomQuestion }) => {
+            const newQuestion = getRandomQuestion(category);
+            set({ 
+              currentText: newQuestion.text,
+              typedText: '' 
+            });
+          });
+        }
       }
     }),
     {

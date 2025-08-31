@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import TypingArea from './TypingArea';
 import ResultCard from './ResultCard';
 import { useEffect } from 'react';
+import { StatsDisplay } from './Stats';
 
 const TypingTest = () => {
  const { status, updateTimer, addWpmDataPoint, wpm } = useTypingStore();
@@ -38,7 +39,7 @@ const TypingTest = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-
+          <StatsDisplay />
           <TypingArea />
 
 
