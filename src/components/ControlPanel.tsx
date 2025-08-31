@@ -42,7 +42,7 @@ const ControlPanel = () => {
                     <Tabs
                         value={timerDuration.toString()}
                         onValueChange={(value) => setTimerDuration(Number(value) as TimerOption)}
-
+                        className="rounded-full border border-gray-300 dark:border-gray-600"
                     >
 
                         <TabsList className={status === 'running' ? 'pointer-events-none opacity-50' : ''}>
